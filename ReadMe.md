@@ -2,7 +2,7 @@
 
 A collaborative board game by Marcello Barisonzi.
 
-_version 0.1 2022-07-01_
+_version 0.2 2022-08-15_
 
 ## Introduction
 
@@ -15,12 +15,12 @@ _You, the players, must save democracy and keep the people happy!_
 ## Game contents
 
 - One playing board
-- X *Event* cards
-- X *Voters* tokens, numbered 1 to 6
+- 16 *Event* cards
+- 70 *Voters* tokens, numbered 1 to 4 (1: 20x, 2: 20x, 3: 20x, 4: 10x)
 - 1 special dice, with coloured sides
-- X regular dice, numbered 1 to 6
-- X *Specialist* cards 
-- X Player markers, of different colors
+- 50 regular dice, numbered 1 to 6
+- 7 *Specialist* cards 
+- 5 Player markers, of different colors
 - 1 *Voter Engagement* marker
 - 1 *Reconcilliation* marker
 - 1 *Forest Fires* marker
@@ -105,11 +105,10 @@ When all the effects of the *Event* cards have been recorded on the board, the g
 In the *Actions* phase, the players play in turn, starting from the *CEO* and proceeding clockwise. Each player has access to the following actions:
 
 - **Open a new Polling Site:** the player places a die, with the number "1" face up, in one of the *Districts* in the same *Region* as their player marker. They can perform the same action on the *Headquarters*, no matter where the player marker is located.
-- **Staff an existing Polling Site:** the player takes one of the *Polling Sites* (die) in one of the *Districts* in the same *Region* as their player marker. Then, they roll the die, and put it back in the same district, with the new number facing up.  They can perform the same action on the *Headquarters*, no matter where the player marker is located.
-- **Move:** move the player token to a neighbouring *Region*. The *Territories* Region is neighbour to both *Prairies* and *British Columbia*. Player markers cannot be moved to *Headquarters*. 
+- **Staff an existing Polling Site:** the player takes one die and rolls it. Then, they can choose to replace with the rolled die one of the *Polling Sites* (die) in one of the *Districts* in the same *Region* as their player marker, number facing up.  They can perform the same action on the *Headquarters*, no matter where the player marker is located.
 - **Reach Out:** without revealing its value, the player moves one voter token from one of the *Districts* in the same *Region* as their player marker, to the *Headquarters* space. This action is not allowed during the last *Campaign Week*.
 
-Each player has 3 *Action Points* available, that can be spent to perform the actions listed above. The actions have different costs:
+Each player has 4 *Action Points* available, that can be spent to perform the actions listed above. The actions have different costs:
 
 - **1 Action Point:** *Reach Out*; *Move*; *Staff an existing Polling Site* (anywhere); *Open a new Polling Site* (*Urban Districts* and *Headquarters*).
 - **2 Action Points:** *Open a new Polling Site* (*Rural Districts*).
@@ -132,6 +131,8 @@ The number of *Voter Intention Rolls* performed by each player at the end of the
 
 After the *Voter Intention Rolls* have been performed, and the voter tokens placed on the game board, the play moves to the next player on the left of the current player.
 
+_Note: Voter Intention Rolls are skipped during the 6th Campaign Week._
+
 If all players have played and the next player on the left is the *CEO*, then the *Actions* phase is over and the game moves to the *Handover* phase.
 
 ### The *Handover* phase
@@ -141,12 +142,27 @@ If there are no remaining *Campaign Weeks* left, then the game moves to the *Sco
 
 ## The *Scoring* phase
 
-In the *Scoring* phase you reveal the Voter Tokens one Region at a time, starting with the Maritimes and ending with the Territories.
-In each District, you add up the value of all Voter Tokens, which forms the *District Turnout*. 
-You compare the *District Turnout* with the combined *Capacity* of all PS in the same district.
-If the *District Turnout* is lower or equal than the combined *Capacity*, nothing happens. 
-Otherwise, a number of *Complaints* equal to the difference between *District Turnout* and *Capacity* is generated.
+During the *Scoring* phase, you are awarded positive and negative *Victory Points* based on three scores:
 
+- Electoral *Turnout* awards positive *Victory Points*.
+- *Complaints* award negative *Victory Points*.
+- Election *Cost* awards negative *Victory Points*.
+
+In this phase, you reveal the Voter Tokens one Region at a time, starting with the Maritimes and ending with the Territories.
+Then, you follow the instructions here below to calculate *Turnout*, *Complaints* and *Cost*.
+
+### Turnout
+
+In each District, you add up the value of all Voter Tokens, which forms the *District Turnout*. 
+You then add up the *District Turnout* in all *Regions* to obtain the final *Turnout*. 
+The number of (positive) *Victory Points* awarded is equal to *Turnout* divided by 5, rounding fractions down.
+
+### Complaints
+
+In each District, you add up the value of all *Polling Stations* dice, which forms the *Capacity*. 
+You then compare the *District Turnout* with the *Capacity*.
+If the *District Turnout* is lower or equal than the *Capacity*, the number of *Complaints* for that district is 0. 
+Otherwise, a number of *Complaints* equal to the difference between *District Turnout* and *Capacity* is generated.
 
 > Example: In the Remote district of the Maritimes, there are 2 Voter Tokens with values 3 and 4. The *District Turnout* is thus 3+4=7.
 > In the same district, there are 2 PS with capacity 1 and 3, for a total *Capacity* of 4. 
@@ -154,13 +170,22 @@ Otherwise, a number of *Complaints* equal to the difference between *District Tu
 
 Add up all *Complaints* for all Districts in a Region, and then add up the complaints for all Regions.
 For the *Headquarters*, follow the same rule, except that here the *Capacity* is doubled, i.e. you multiply the sum of all dice by 2 before subtracting from the *District Turnout*.
- 
-Add up all the *Complaints* rom the Regiona and HQ, and compare the results with the following scale to check how well you played:
 
-- **Less than 5 Complaints**: Congratulations! The elections were succesful and the electorate's confidence in the democratic process has been restored!
-- **From 6 to 10 Complaints**: Well done! Quiet elections, some minor complains reported on local media.
-- **From 11 to 15 Complaints**: Uh-oh. National media report of major disruptions at polling sites. The parliamentary committee is going to ask you some tough questions.
-- **More than 15 Complaints**: Disaster! Mobs armed with pitchforks invade Parliament. Luckily, it's still closed for construction. You seek refuge in the world's last bastion of democracy, Switzerland.  
+The number of (negative) *Victory Points* awarded is equal to the number of *Complaints*.
+
+### Cost
+
+To calculate *Cost*, add up the *Capacity* of all *Polling Station* dice, in the Regions and on HQ. 
+The number of (negative) *Victory Points* awarded is equal to *Cost* divided by 10, rounding fractions down.
+
+### Final Score  
+
+Subtract negative *Victory Points* from positive ones, and check where how you fared on this table:
+
+- **More than 10 Victory Points**: Congratulations! The elections were succesful and the electorate's confidence in the democratic process has been restored!
+- **From 1 to 10 Victory Points**: Well done! Quiet elections, some minor complains reported on local media.
+- **From 0 to -10 Victory Points**: Uh-oh. National media report of major disruptions at polling sites. The parliamentary committee is going to ask you some tough questions.
+- **Less than -10 Victory Points**: Disaster! Mobs armed with pitchforks invade Parliament. Luckily, it's still closed for construction. You seek refuge in the world's last bastion of democracy, Switzerland.  
 
 ## *Event* cards
 
@@ -171,13 +196,15 @@ Add up all the *Complaints* rom the Regiona and HQ, and compare the results with
 | Flash Floods                | Remove all PS from a random rural district, and place a *Flash Floods* token. Voter tokens and PS cannot be placed in this district for the remainder of the game. Redistribute randomly all tokens from this district to other districts in the same region |    |
 | Fordism                     | Add one voter token to all districts in Ontario                                                                                              | +1 |
 | Forest Fires                | Remove all PS from a random remote district, and place a *Forest Fires* token. Voter tokens and PS cannot be placed in this district for the remainder of the game. Redistribute randomly all tokens from this district to other districts in the same region |    | ||
+| Gas Prices                  | Add one voter token to all rural districts | +1 |
+| Honk Honk!                  | At the end of the game, HQ capacity is reduced by 25% |    | 
 | Idle No More                | Add one voter token to all remote districts | +1 |
 | Newfoundland Independentism | Add one voter token to all districts in the Maritimes | +1 |
 | Personnel Shortage          | Roll the Regions die. Place the *Personnel Shortage* marker in the resulting Region. The cost of all staffing actions in this Region is increased by one ||
 | Protesters                  | Reduce the capacity of all PS in a random district. If the capacity of any PS becomes 0, remove the PS from that district. ||
 | Quarantine                  | Remove all PS from a random urban district, and place a *Quarantine* token. Voter tokens and PS cannot be placed in this district for the remainder of the game. Redistribute randomly all tokens from this district to other districts in the same region ||
 | Quebec Independentism       | Add one voter token to all districts in Quebec | +1 |
-| Reconcilliation             | At the end of the game, *Complaints* in remote districs are multiplied 2x ||
+| Reconcilliation             | At the end of the game, *Complaints* in remote districts are multiplied 2x ||
 | Student Strikes             | Add one voter token to all urban districts | +1 |
 | Wexit                       | Add one voter token to all districts in the Prairies                                           | +1 |
 
@@ -191,12 +218,12 @@ Each player receives at the beginning of the game a *Specialist* card, that gran
 The special action can be combined with other regular actions during the player's turn, if the amount of Action Points spent allows it.
 
 - *Communications Officer*: *Advertise* &mdash; each *Reach Out* action has an increased effect, allowing you to move 2 Voter Tokens to HQ. Note that the *Reach Out* action is not allowed during the last *Campaign Week*.
-- *Data Analyst*: *Simulate* &mdash; Spend 3 Action Points to look at the Event Card from the next Campaign Week. You can show this card to other players, then place it face down where you took it.
-- *Geographer*: *Geolocate* &mdash; Placing a Polling Station in Rural and Remote areas costs 1 Action Points less.
-- *Field Liaison Officer*: *Coordinate* &mdash; Spend 1 Action Point to move another player to a neighbouring Region during your turn.
+- *Data Analyst*: *Simulate* &mdash; Spend 1 Action Point to look at the Event Card from the next Campaign Week. You can show this card to other players, then place it face down where you took it.
+- *Distribution Specialist*: *Distribute Material* &mdash; Placing a Polling Station in Rural and Remote districts costs 1 Action Points less. In Urban districts, you can open 2 Polling Stations for the cost of 1 Action Point.
+- *Field Liaison Officer*: *Coordinate* &mdash; Spend 1 Action Point to perform an Action with the same benefits as another *Specialist* who is located in a neighbouring *Region*.
 - *Returning Officer*: *Split & Merge* &mdash; Spend 1 Action Point to reduce the Capacity of a PS in the region you occupy by 1 (cannot be reduced to 0). Then, place a new PS in the same Region.
-- *Survey Specialist*: *Survey* &mdash; Spend 1 Action Point to flip a Voter Token side up, showing its value, in the same Region as your pawn. This token stays side up for the remainder of the game, unless removed by an event card.
-- *Staffing Officer*: *Recruit* &mdash; Spend 1 Action Point to increase the Capacity of a PS by 1 (cannot exceed 6).
+- *Survey Specialist*: *Survey* &mdash; Spend 1 Action Point to flip 3 Voter Tokens side up, showing its value, in the same Region as your pawn. You are not allowed to flip more than one token in each district during the same Campaign Week. These tokens stay side up for the remainder of the game, unless removed by an event card.
+- *Staffing Officer*: *Recruit* &mdash; When staffing an exiting Polling Site, Roll 2 dice instead of one, then keep the highest score.
 
 
 
