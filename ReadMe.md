@@ -2,11 +2,11 @@
 
 A collaborative board game by Marcello Barisonzi.
 
-_version 0.2 2022-08-15_
+_version 0.3 2022-09-01_
 
 ## Introduction
 
-**Poll Position!** is a collaborative board game for 2-5 players. In this game, players help each other organizing a Federal General Election in Canada.
+**Poll Position!** is a collaborative board game for 2-4 players. In this game, players help each other organizing a Federal General Election in Canada.
 As electors show up to vote, players must be sure that there are enough polling sites and that these are adequately staffed. 
 If they fail to do so, the result would be long queue lines, complaints to the media, and eventually less trust in the electoral process.
 
@@ -15,7 +15,7 @@ _You, the players, must save democracy and keep the people happy!_
 ## Game contents
 
 - One playing board
-- 16 *Event* cards
+- 17 *Event* cards
 - 70 *Voters* tokens, numbered 1 to 4 (1: 20x, 2: 20x, 3: 20x, 4: 10x)
 - 1 special dice, with coloured sides
 - 50 regular dice, numbered 1 to 6
@@ -52,7 +52,7 @@ On the game board here is also one special additional area, labelled *Headquarte
 
 At the bottom of the game board there are also six empty spaces which will be used to hold event cards.
 
-At the top right of the table there is also a *Voter Engagement Track* with seven spaces, numbered 0 to 6.
+At the top right of the table there is also a *Voter Engagement Track* with six spaces, numbered 0 to 5.
 
 
 ### Setting up the game
@@ -73,7 +73,7 @@ Each player then collects the player marker with the same color (or symbol) of t
 
 ## Game phases
 
-The game develops over six rounds, known as *Campaign Weeks*. Each of them is composed of the following phases:
+The game develops over five rounds, known as *Campaign Weeks*. Each of them is composed of the following phases:
 
 1. The *Planning* phase.
 2. The *Events* phase.
@@ -110,7 +110,7 @@ In the *Actions* phase, the players play in turn, starting from the *CEO* and pr
 
 Each player has 4 *Action Points* available, that can be spent to perform the actions listed above. The actions have different costs:
 
-- **1 Action Point:** *Reach Out*; *Move*; *Staff an existing Polling Site* (anywhere); *Open a new Polling Site* (*Urban Districts* and *Headquarters*).
+- **1 Action Point:** *Reach Out*; *Staff an existing Polling Site* (anywhere); *Open a new Polling Site* (*Urban Districts* and *Headquarters*).
 - **2 Action Points:** *Open a new Polling Site* (*Rural Districts*).
 - **3 Action Points:** *Open a new Polling Site* (*Remote Districts*).
 
@@ -126,8 +126,8 @@ If the dice roll indicates a combination that is not valid (e.g. *Urban* or *Rur
 The number of *Voter Intention Rolls* performed by each player at the end of their turns depends from the position of the *Voter Engagement* marker on the *Voter Engagement Track*: 
 
 - If the marker is on spaces 0-2, then each player performs 2 *Voter Intention Rolls* at the end of their turn.
-- If the marker is on spaces 3-5, then each player performs 3 *Voter Intention Rolls* at the end of their turn.
-- If the marker is on space 6, then each player performs 4 *Voter Intention Rolls* at the end of their turn.
+- If the marker is on spaces 3-4, then each player performs 3 *Voter Intention Rolls* at the end of their turn.
+- If the marker is on space 5, then each player performs 4 *Voter Intention Rolls* at the end of their turn.
 
 After the *Voter Intention Rolls* have been performed, and the voter tokens placed on the game board, the play moves to the next player on the left of the current player.
 
@@ -200,6 +200,7 @@ Subtract negative *Victory Points* from positive ones, and check where how you f
 | Honk Honk!                  | At the end of the game, HQ capacity is reduced by 25% |    | 
 | Idle No More                | Add one voter token to all remote districts | +1 |
 | Newfoundland Independentism | Add one voter token to all districts in the Maritimes | +1 |
+| Postal Strike               | Remove half of the PS at HQ, rounding down. You can choose which ones to sacrifice. | |
 | Personnel Shortage          | Roll the Regions die. Place the *Personnel Shortage* marker in the resulting Region. The cost of all staffing actions in this Region is increased by one ||
 | Protesters                  | Reduce the capacity of all PS in a random district. If the capacity of any PS becomes 0, remove the PS from that district. ||
 | Quarantine                  | Remove all PS from a random urban district, and place a *Quarantine* token. Voter tokens and PS cannot be placed in this district for the remainder of the game. Redistribute randomly all tokens from this district to other districts in the same region ||
@@ -218,9 +219,9 @@ Each player receives at the beginning of the game a *Specialist* card, that gran
 The special action can be combined with other regular actions during the player's turn, if the amount of Action Points spent allows it.
 
 - *Communications Officer*: *Advertise* &mdash; each *Reach Out* action has an increased effect, allowing you to move 2 Voter Tokens to HQ. Note that the *Reach Out* action is not allowed during the last *Campaign Week*.
-- *Data Analyst*: *Simulate* &mdash; Spend 1 Action Point to look at the Event Card from the next Campaign Week. You can show this card to other players, then place it face down where you took it.
+- *Data Analyst*: *Simulate* &mdash; Once during your turn, spend 1 Action Point to look at the Event Card from the next Campaign Week. You can show this card to other players, then place it face down where you took it.
 - *Distribution Specialist*: *Distribute Material* &mdash; Placing a Polling Station in Rural and Remote districts costs 1 Action Points less. In Urban districts, you can open 2 Polling Stations for the cost of 1 Action Point.
-- *Field Liaison Officer*: *Coordinate* &mdash; Spend 1 Action Point to perform an Action with the same benefits as another *Specialist* who is located in a neighbouring *Region*.
+- *Field Liaison Officer*: *Coordinate* &mdash; Once during your turn, spend 1 Action Point to perform an Action with the same benefits as another *Specialist* who is located in a neighbouring *Region*.
 - *Returning Officer*: *Split & Merge* &mdash; Spend 1 Action Point to reduce the Capacity of a PS in the region you occupy by 1 (cannot be reduced to 0). Then, place a new PS in the same Region.
 - *Survey Specialist*: *Survey* &mdash; Spend 1 Action Point to flip 3 Voter Tokens side up, showing its value, in the same Region as your pawn. You are not allowed to flip more than one token in each district during the same Campaign Week. These tokens stay side up for the remainder of the game, unless removed by an event card.
 - *Staffing Officer*: *Recruit* &mdash; When staffing an exiting Polling Site, Roll 2 dice instead of one, then keep the highest score.
